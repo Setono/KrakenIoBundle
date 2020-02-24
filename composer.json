@@ -52,6 +52,9 @@
         "analyse": "vendor/bin/phpstan analyse -c phpstan.neon -l max src",
         "check-style": "vendor/bin/ecs check --ansi src/ tests/",
         "fix-style": "vendor/bin/ecs check --fix --ansi src/ tests/",
-        "test": "vendor/bin/phpunit"
+        "phpunit": "vendor/bin/phpunit",
+        "test": [
+            "@phpunit"
+        ]
     }
 }
