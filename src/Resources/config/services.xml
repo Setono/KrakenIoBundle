@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <service id="Setono\Kraken\Client\ClientInterface" alias="setono_kraken_io.client"/>
+        <service id="setono_kraken_io.client" class="Setono\Kraken\Client\Client">
+            <argument>%setono_kraken_io.api_key%</argument>
+            <argument>%setono_kraken_io.api_secret%</argument>
+            <argument type="service" id="setono_kraken_io.http_client" on-invalid="null"/>
+            <argument type="service" id="setono_kraken_io.http_request_factory" on-invalid="null"/>
+            <argument type="service" id="setono_kraken_io.http_stream_factory" on-invalid="null"/>
+            <argument type="service" id="setono_kraken_io.response_factory" on-invalid="null"/>
+            <argument>%setono_kraken_io.base_url%</argument>
+        </service>
+    </services>
+</container>

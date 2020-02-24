@@ -1,0 +1,57 @@
+{
+    "name": "setono/kraken-io-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony bundle that integrates the kraken.io PHP SDK",
+    "keywords": [
+        "symfony",
+        "setono",
+        "kraken.io"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^7.2",
+        "setono/kraken-io-php-sdk": "^1.0",
+        "symfony/config": "^4.0 || ^5.0",
+        "symfony/dependency-injection": "^4.0 || ^5.0",
+        "symfony/framework-bundle": "^4.0 || ^5.0"
+    },
+    "require-dev": {
+        "korbeil/phpstan-generic-rules": "^0.2.4",
+        "kriswallsmith/buzz": "^1.0",
+        "localheinz/composer-normalize": "^2.2",
+        "matthiasnoback/symfony-config-test": "^4.0",
+        "matthiasnoback/symfony-dependency-injection-test": "^4.0",
+        "nyholm/psr7": "^1.1",
+        "phpstan/phpstan": "^0.12",
+        "phpstan/phpstan-strict-rules": "^0.12",
+        "phpunit/phpunit": "^8.0",
+        "roave/security-advisories": "dev-master",
+        "sylius-labs/coding-standard": "^3.1",
+        "thecodingmachine/phpstan-safe-rule": "^1.0"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Setono\\KrakenIoBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\Setono\\KrakenIoBundle\\": "tests/"
+        }
+    },
+    "prefer-stable": true,
+    "scripts": {
+        "analyse": "vendor/bin/phpstan analyse -c phpstan.neon -l max src",
+        "check-style": "vendor/bin/ecs check --ansi src/ tests/",
+        "fix-style": "vendor/bin/ecs check --fix --ansi src/ tests/",
+        "test": "vendor/bin/phpunit"
+    }
+}
