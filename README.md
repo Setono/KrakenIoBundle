@@ -3,7 +3,7 @@
 [![Latest Version][ico-version]][link-packagist]
 [![Latest Unstable Version][ico-unstable-version]][link-packagist]
 [![Software License][ico-license]](LICENSE)
-[![Build Status][ico-travis]][link-travis]
+[![Build Status][ico-github-actions]][link-github-actions]
 [![Quality Score][ico-code-quality]][link-code-quality]
 
 Integrates the [kraken.io PHP SDK](https://github.com/Setono/kraken-io-php-sdk) into Symfony.
@@ -73,9 +73,9 @@ With auto wiring this will work out of the box. If you're not using auto wiring 
 [ico-version]: https://poser.pugx.org/setono/kraken-io-bundle/v/stable
 [ico-unstable-version]: https://poser.pugx.org/setono/kraken-io-bundle/v/unstable
 [ico-license]: https://poser.pugx.org/setono/kraken-io-bundle/license
-[ico-travis]: https://travis-ci.com/Setono/KrakenIoBundle.svg?branch=master
+[ico-github-actions]: https://github.com/Setono/kraken-io-bundle/workflows/build/badge.svg
 [ico-code-quality]: https://img.shields.io/scrutinizer/g/Setono/KrakenIoBundle.svg?style=flat-square
 
 [link-packagist]: https://packagist.org/packages/setono/kraken-io-bundle
-[link-travis]: https://travis-ci.com/Setono/KrakenIoBundle
+[link-github-actions]: https://github.com/Setono/kraken-io-bundle/actions
 [link-code-quality]: https://scrutinizer-ci.com/g/Setono/KrakenIoBundle
