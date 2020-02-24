@@ -73,9 +73,9 @@ With auto wiring this will work out of the box. If you're not using auto wiring 
 [ico-version]: https://poser.pugx.org/setono/kraken-io-bundle/v/stable
 [ico-unstable-version]: https://poser.pugx.org/setono/kraken-io-bundle/v/unstable
 [ico-license]: https://poser.pugx.org/setono/kraken-io-bundle/license
-[ico-github-actions]: https://github.com/Setono/kraken-io-bundle/workflows/build/badge.svg
+[ico-github-actions]: https://github.com/Setono/KrakenIoBundle/workflows/build/badge.svg
 [ico-code-quality]: https://img.shields.io/scrutinizer/g/Setono/KrakenIoBundle.svg?style=flat-square
 
 [link-packagist]: https://packagist.org/packages/setono/kraken-io-bundle
-[link-github-actions]: https://github.com/Setono/kraken-io-bundle/actions
+[link-github-actions]: https://github.com/Setono/KrakenIoBundle/actions
 [link-code-quality]: https://scrutinizer-ci.com/g/Setono/KrakenIoBundle
