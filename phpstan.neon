@@ -1,3 +1,8 @@
+includes:
+	- vendor/korbeil/phpstan-generic-rules/extension.neon
+	- vendor/phpstan/phpstan-strict-rules/rules.neon
+	- vendor/thecodingmachine/phpstan-safe-rule/phpstan-safe-rule.neon
+
 parameters:
     reportUnmatchedIgnoredErrors: true
     checkMissingIterableValueType: false
