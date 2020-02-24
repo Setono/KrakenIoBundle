@@ -63,7 +63,7 @@ With auto wiring this will work out of the box. If you're not using auto wiring 
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
         <service id="YourService">
-            <argument type="service" id="Setono\PostNord\Client\ClientInterface"/>
+            <argument type="service" id="Setono\Kraken\Client\ClientInterface"/>
         </service>
     </services>
 </container>
