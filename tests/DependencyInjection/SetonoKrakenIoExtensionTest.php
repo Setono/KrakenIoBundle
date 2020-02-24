@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Tests\Setono\KrakenIoBundle\DependencyInjection;
 
 use Matthias\SymfonyDependencyInjectionTest\PhpUnit\AbstractExtensionTestCase;
-use Setono\KrakenIoBundle\DependencyInjection\SetonoKrakenIoExtension;
 use Setono\Kraken\Client\Client;
 use Setono\Kraken\Client\ClientInterface;
+use Setono\KrakenIoBundle\DependencyInjection\SetonoKrakenIoExtension;
 
 final class SetonoKrakenIoExtensionTest extends AbstractExtensionTestCase
 {

@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Tests\Setono\KrakenIoBundle\DependencyInjection\Compiler;
 
-use Buzz\Client\BuzzClientInterface;
 use Matthias\SymfonyDependencyInjectionTest\PhpUnit\AbstractCompilerPassTestCase;
 use Setono\KrakenIoBundle\DependencyInjection\Compiler\RegisterHttpClientPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -22,23 +21,11 @@ final class RegisterHttpClientPassTest extends AbstractCompilerPassTestCase
      */
     public function if_http_client_parameter_is_set_the_service_alias_exists(): void
     {
-        $this->setParameter('setono_kraken_io.http_client', 'http_client_service_id');
+        $this->setParameter('setono_kraken_io.http_client_service_id', 'http_client_service_id');
         $this->setDefinition('http_client_service_id', new Definition());
 
         $this->compile();
 
         $this->assertContainerBuilderHasAlias('setono_kraken_io.http_client', 'http_client_service_id');
-    }
-
-    /**
-     * @test
-     */
-    public function if_buzz_http_client_service_exists_the_service_alias_exists(): void
-    {
-        $this->setDefinition(BuzzClientInterface::class, new Definition());
-
-        $this->compile();
-
-        $this->assertContainerBuilderHasAlias('setono_kraken_io.http_client', BuzzClientInterface::class);
     }
 }
