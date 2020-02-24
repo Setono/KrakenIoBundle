@@ -50,6 +50,10 @@ final class Configuration implements ConfigurationInterface
                     ->cannotBeEmpty()
                     ->info('Service id of your own stream factory to use with the kraken.io client')
                 ->end()
+                ->scalarNode('response_factory')
+                    ->cannotBeEmpty()
+                    ->info('Service id of your own response factory to use with the kraken.io client')
+                ->end()
             ->end()
         ;
 

@@ -36,6 +36,10 @@ final class SetonoKrakenIoExtension extends Extension
             $container->setParameter('setono_kraken_io.http_stream_factory_service_id', $config['http_stream_factory']);
         }
 
+        if (isset($config['response_factory'])) {
+            $container->setParameter('setono_kraken_io.response_factory_service_id', $config['response_factory']);
+        }
+
         $loader->load('services.xml');
     }
 }

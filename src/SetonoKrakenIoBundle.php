@@ -4,8 +4,7 @@ declare(strict_types=1);
 
 namespace Setono\KrakenIoBundle;
 
-use Setono\KrakenIoBundle\DependencyInjection\Compiler\RegisterFactoriesPass;
-use Setono\KrakenIoBundle\DependencyInjection\Compiler\RegisterHttpClientPass;
+use Setono\KrakenIoBundle\DependencyInjection\Compiler\RegisterAliasesPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
@@ -15,7 +14,6 @@ final class SetonoKrakenIoBundle extends Bundle
     {
         parent::build($container);
 
-        $container->addCompilerPass(new RegisterFactoriesPass());
-        $container->addCompilerPass(new RegisterHttpClientPass());
+        $container->addCompilerPass(new RegisterAliasesPass());
     }
 }
