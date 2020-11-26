@@ -24,6 +24,7 @@ final class RegisterAliasesPass implements CompilerPassInterface
             return;
         }
 
+        /** @var string $serviceId */
         $serviceId = $container->getParameter($parameter);
         if (!$container->has($serviceId)) {
             throw new ServiceNotFoundException($serviceId);

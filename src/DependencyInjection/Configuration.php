@@ -11,15 +11,13 @@ final class Configuration implements ConfigurationInterface
 {
     public function getConfigTreeBuilder(): TreeBuilder
     {
-        if (method_exists(TreeBuilder::class, 'getRootNode')) {
-            $treeBuilder = new TreeBuilder('setono_kraken_io');
-            $rootNode = $treeBuilder->getRootNode();
-        } else {
-            // BC layer for symfony/config 4.1 and older
-            $treeBuilder = new TreeBuilder();
-            $rootNode = $treeBuilder->root('setono_kraken_io');
-        }
+        $treeBuilder = new TreeBuilder('setono_kraken_io');
+        $rootNode = $treeBuilder->getRootNode();
 
+        /**
+         * @psalm-suppress MixedMethodCall
+         * @psalm-suppress PossiblyUndefinedMethod
+         */
         $rootNode
             ->addDefaultsIfNotSet()
             ->children()
@@ -41,18 +39,38 @@ final class Configuration implements ConfigurationInterface
                 ->scalarNode('http_client')
                     ->cannotBeEmpty()
                     ->info('Service id of your own PSR18 HTTP client to use with the kraken.io client')
+                    ->setDeprecated(
+                        'setono/kraken-io-bundle',
+                        '1.1',
+                        'The child node "%node%" at path "%path%" is deprecated. Define the service "setono_kraken_io.http_client" directly instead'
+                    )
                 ->end()
                 ->scalarNode('http_request_factory')
                     ->cannotBeEmpty()
                     ->info('Service id of your own http request factory to use with the kraken.io client')
+                    ->setDeprecated(
+                        'setono/kraken-io-bundle',
+                        '1.1',
+                        'The child node "%node%" at path "%path%" is deprecated. Define the service "setono_kraken_io.http_request_factory" directly instead'
+                    )
                 ->end()
                 ->scalarNode('http_stream_factory')
                     ->cannotBeEmpty()
                     ->info('Service id of your own http stream factory to use with the kraken.io client')
+                    ->setDeprecated(
+                        'setono/kraken-io-bundle',
+                        '1.1',
+                        'The child node "%node%" at path "%path%" is deprecated. Define the service "setono_kraken_io.http_stream_factory" directly instead'
+                    )
                 ->end()
                 ->scalarNode('response_factory')
                     ->cannotBeEmpty()
                     ->info('Service id of your own response factory to use with the kraken.io client')
+                    ->setDeprecated(
+                        'setono/kraken-io-bundle',
+                        '1.1',
+                        'The child node "%node%" at path "%path%" is deprecated. Define the service "setono_kraken_io.response_factory" directly instead'
+                    )
                 ->end()
             ->end()
         ;
