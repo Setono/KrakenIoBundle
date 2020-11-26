@@ -45,10 +45,11 @@ Now you can inject the `ClientInterface` into your service:
 
 ```php
 <?php
+namespace App\Image;
 
 use Setono\Kraken\Client\ClientInterface;
 
-final class YourService
+final class Optimizer
 {
     private $client;
     
