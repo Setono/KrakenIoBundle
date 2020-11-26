@@ -8,6 +8,7 @@ use Matthias\SymfonyDependencyInjectionTest\PhpUnit\AbstractCompilerPassTestCase
 use Setono\KrakenIoBundle\DependencyInjection\Compiler\RegisterAliasesPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
+use Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
 
 /**
  * @çovers \Setono\KrakenIoBundle\DependencyInjection\Compiler\RegisterAliasesPass
@@ -43,5 +44,17 @@ final class RegisterAliasesPassTest extends AbstractCompilerPassTestCase
         $this->compile();
 
         $this->assertContainerBuilderHasAlias('setono_kraken_io.http_client', 'http_client_service_id');
+    }
+
+    /**
+     * @test
+     */
+    public function it_throws_exception_if_service_does_not_exist(): void
+    {
+        $this->expectException(ServiceNotFoundException::class);
+
+        $this->setParameter('setono_kraken_io.http_client_service_id', 'http_client_service_id');
+
+        $this->compile();
     }
 }

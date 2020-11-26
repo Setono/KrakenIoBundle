@@ -37,6 +37,7 @@ final class SetonoKrakenIoExtensionTest extends AbstractExtensionTestCase
             'http_client' => 'http_client_service_id',
             'http_request_factory' => 'request_factory_service_id',
             'http_stream_factory' => 'stream_factory_service_id',
+            'response_factory' => 'response_factory_service_id',
         ]);
 
         $this->assertContainerBuilderHasParameter('setono_kraken_io.api_key', 'api key');
@@ -45,6 +46,7 @@ final class SetonoKrakenIoExtensionTest extends AbstractExtensionTestCase
         $this->assertContainerBuilderHasParameter('setono_kraken_io.http_client_service_id', 'http_client_service_id');
         $this->assertContainerBuilderHasParameter('setono_kraken_io.http_request_factory_service_id', 'request_factory_service_id');
         $this->assertContainerBuilderHasParameter('setono_kraken_io.http_stream_factory_service_id', 'stream_factory_service_id');
+        $this->assertContainerBuilderHasParameter('setono_kraken_io.response_factory_service_id', 'response_factory_service_id');
     }
 
     /**
