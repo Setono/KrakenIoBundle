@@ -9,6 +9,9 @@ use Nyholm\BundleTest\CompilerPass\PublicServicePass;
 use Setono\Kraken\Client\Client;
 use Setono\KrakenIoBundle\SetonoKrakenIoBundle;
 
+/**
+ * @covers \Setono\KrakenIoBundle\SetonoKrakenIoBundle
+ */
 final class SetonoKrakenIoBundleTest extends BaseBundleTestCase
 {
     protected function getBundleClass(): string
@@ -36,8 +39,8 @@ final class SetonoKrakenIoBundleTest extends BaseBundleTestCase
 
         $container = $this->getContainer();
 
-        $this->assertTrue($container->has('setono_kraken_io.client'));
+        self::assertTrue($container->has('setono_kraken_io.client'));
         $service = $container->get('setono_kraken_io.client');
-        $this->assertInstanceOf(Client::class, $service);
+        self::assertInstanceOf(Client::class, $service);
     }
 }

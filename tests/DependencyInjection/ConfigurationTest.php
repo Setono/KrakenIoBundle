@@ -8,6 +8,9 @@ use Matthias\SymfonyConfigTest\PhpUnit\ConfigurationTestCaseTrait;
 use PHPUnit\Framework\TestCase;
 use Setono\KrakenIoBundle\DependencyInjection\Configuration;
 
+/**
+ * @covers \Setono\KrakenIoBundle\DependencyInjection\Configuration
+ */
 final class ConfigurationTest extends TestCase
 {
     use ConfigurationTestCaseTrait;

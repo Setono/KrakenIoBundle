@@ -9,6 +9,9 @@ use Setono\Kraken\Client\Client;
 use Setono\Kraken\Client\ClientInterface;
 use Setono\KrakenIoBundle\DependencyInjection\SetonoKrakenIoExtension;
 
+/**
+ * @covers \Setono\KrakenIoBundle\DependencyInjection\SetonoKrakenIoExtension
+ */
 final class SetonoKrakenIoExtensionTest extends AbstractExtensionTestCase
 {
     protected function getContainerExtensions(): array

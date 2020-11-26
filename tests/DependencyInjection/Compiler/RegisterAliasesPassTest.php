@@ -9,6 +9,9 @@ use Setono\KrakenIoBundle\DependencyInjection\Compiler\RegisterAliasesPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
 
+/**
+ * @çovers \Setono\KrakenIoBundle\DependencyInjection\Compiler\RegisterAliasesPass
+ */
 final class RegisterAliasesPassTest extends AbstractCompilerPassTestCase
 {
     protected function registerCompilerPass(ContainerBuilder $container): void
