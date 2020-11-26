@@ -4,7 +4,7 @@
 [![Latest Unstable Version][ico-unstable-version]][link-packagist]
 [![Software License][ico-license]](LICENSE)
 [![Build Status][ico-github-actions]][link-github-actions]
-[![Quality Score][ico-code-quality]][link-code-quality]
+[![Code Coverage][ico-code-coverage]][link-code-coverage]
 
 Integrates the [kraken.io PHP SDK](https://github.com/Setono/kraken-io-php-sdk) into Symfony.
 
@@ -12,14 +12,9 @@ Integrates the [kraken.io PHP SDK](https://github.com/Setono/kraken-io-php-sdk) 
 
 ### Step 1: Download the bundle
 
-Open a command console, enter your project directory and execute the following command to download the latest stable version of this plugin:
-
 ```bash
 $ composer require setono/kraken-io-bundle
 ```
-
-This command requires you to have Composer installed globally, as explained in the [installation chapter](https://getcomposer.org/doc/00-intro.md) of the Composer documentation.
-
 
 ### Step 2: Enable the bundle
 
@@ -34,6 +29,15 @@ $bundles = [
     
     // ...
 ];
+```
+
+### Step 3: Add configuration
+
+```yaml
+# config/packages/setono_kraken_io.yaml
+setono_kraken_io:
+    api_key: your_api_key
+    api_secret: your_api_secret
 ```
 
 ## Usage
@@ -74,8 +78,8 @@ With auto wiring this will work out of the box. If you're not using auto wiring 
 [ico-unstable-version]: https://poser.pugx.org/setono/kraken-io-bundle/v/unstable
 [ico-license]: https://poser.pugx.org/setono/kraken-io-bundle/license
 [ico-github-actions]: https://github.com/Setono/KrakenIoBundle/workflows/build/badge.svg
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/Setono/KrakenIoBundle.svg?style=flat-square
+[ico-code-coverage]: https://codecov.io/gh/Setono/KrakenIoBundle/branch/master/graph/badge.svg
 
 [link-packagist]: https://packagist.org/packages/setono/kraken-io-bundle
 [link-github-actions]: https://github.com/Setono/KrakenIoBundle/actions
-[link-code-quality]: https://scrutinizer-ci.com/g/Setono/KrakenIoBundle
+[link-code-coverage]: https://codecov.io/gh/Setono/KrakenIoBundle
