@@ -9,26 +9,21 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.2",
+        "php": "^7.3",
         "setono/kraken-io-php-sdk": "^1.0",
-        "symfony/config": "^4.0 || ^5.0",
-        "symfony/dependency-injection": "^4.0 || ^5.0",
-        "symfony/framework-bundle": "^4.0 || ^5.0"
+        "symfony/config": "^4.4 || ^5.0",
+        "symfony/dependency-injection": "^4.4 || ^5.0",
+        "symfony/framework-bundle": "^4.4 || ^5.0"
     },
     "require-dev": {
-        "korbeil/phpstan-generic-rules": "^0.2.4",
         "kriswallsmith/buzz": "^1.0",
-        "localheinz/composer-normalize": "^2.2",
         "matthiasnoback/symfony-config-test": "^4.0",
         "matthiasnoback/symfony-dependency-injection-test": "^4.0",
         "nyholm/psr7": "^1.1",
         "nyholm/symfony-bundle-test": "^1.6",
-        "phpstan/phpstan": "^0.12",
-        "phpstan/phpstan-strict-rules": "^0.12",
-        "phpunit/phpunit": "^8.0",
+        "phpunit/phpunit": "^9.4",
         "roave/security-advisories": "dev-master",
-        "sylius-labs/coding-standard": "^3.1",
-        "thecodingmachine/phpstan-safe-rule": "^1.0"
+        "setono/code-quality-pack": "^1.4"
     },
     "config": {
         "sort-packages": true
@@ -50,10 +45,13 @@
     },
     "prefer-stable": true,
     "scripts": {
-        "analyse": "vendor/bin/phpstan analyse -c phpstan.neon -l max src",
-        "check-style": "vendor/bin/ecs check --ansi src/ tests/",
-        "fix-style": "vendor/bin/ecs check --fix --ansi src/ tests/",
-        "phpunit": "vendor/bin/phpunit",
+        "analyse": [
+            "phpstan analyse -c phpstan.neon",
+            "vendor/bin/psalm"
+        ],
+        "check-style": "ecs check --ansi src/ tests/",
+        "fix-style": "ecs check --fix --ansi src/ tests/",
+        "phpunit": "phpunit",
         "test": [
             "@phpunit"
         ]
