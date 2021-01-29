@@ -23,7 +23,7 @@
         "nyholm/symfony-bundle-test": "^1.6",
         "phpunit/phpunit": "^9.4",
         "roave/security-advisories": "dev-master",
-        "setono/code-quality-pack": "^1.4"
+        "setono/code-quality-pack": "^1.4 || ^2.0"
     },
     "config": {
         "sort-packages": true
